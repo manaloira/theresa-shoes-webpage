@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Model #230321 - Details</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/collections.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .detail-image {
+            width: 100%;
+            height: auto;
+        }
+        .detail-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .detail-content h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+            font-family: 'Playfair Display', serif;
+        }
+        .detail-content .price {
+            font-size: 1.8em;
+            color: #333;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .detail-content .description {
+            line-height: 1.8;
+            color: #666;
+            margin: 30px 0;
+        }
+        .detail-content .btn {
+            background-color: #000;
+            color: #fff;
+            padding: 15px 40px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .detail-content .btn:hover {
+            background-color: #333;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .back-link:hover {
+            color: #000;
+        }
+        @media (max-width: 768px) {
+            .detail-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>    
+    <header id="header">
+        <nav id="nav-bar">
+            <h2>Theresa Shoes</h2>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../collections.html">Collections</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+                <li><a href="../../about-us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-scroll-wrapper">
+        <main>
+            <a href="../../collections.html" class="back-link">← Back to Collections</a>
+            
+            <div class="detail-container">
+                <div class="detail-image">
+                    <img src="../../assets/images/SHOES/shoe1.png" alt="Shoe Model #230321">
+                </div>
+                <div class="detail-content">
+                    <h1>Shoe Model #230321</h1>
+                    <p class="price">₱1,800.00</p>
+                    <p class="description">
+                        Experience the perfect blend of style and comfort with this premium shoe model. 
+                        Crafted with high-quality materials and attention to detail, this shoe is designed 
+                        to elevate your everyday look. Whether you're heading to the office or out for a 
+                        casual day, this versatile piece is a must-have addition to your collection.
+                    </p>
+                    <h3>Features:</h3>
+                    <ul>
+                        <li>Premium quality materials</li>
+                        <li>Comfortable fit for all-day wear</li>
+                        <li>Elegant design</li>
+                        <li>Durable sole</li>
+                    </ul>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <p>&copy; 2025 Theresa Shoes. All rights reserved.</p>
+        </footer> 
+    </div>
+</body>
+</html>
