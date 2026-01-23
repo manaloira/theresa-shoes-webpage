@@ -1,0 +1,124 @@
+/* --- Page Layout & Scrolling --- */
+/* Since global CSS has 'body { overflow: hidden }', 
+   we need a wrapper to allow this specific page to scroll 
+*/
+.page-scroll-wrapper {
+    height: 100vh;
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding-top: 80px; /* Push content down below fixed nav-bar */
+    background-color: var(--bg-beige);
+}
+
+/* --- Banner Section (WOMEN) --- */
+.women-banner {
+    background-color: #0f0f0f; /* Pitch black */
+    color: #fff;
+    width: 100%;
+    padding: 35px 0;
+    text-align: center;
+}
+
+.women-banner h1 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* --- Toolbar (Filter & Breadcrumbs) --- */
+.toolbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter-icon svg {
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+}
+
+.breadcrumbs {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Product Grid --- */
+.products-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 80px 20px; /* Bottom padding for breathing room */
+    display: grid;
+    /* 3 Columns that auto-fit */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 111px;
+}
+
+/* --- Product Card --- */
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container {
+    width: 100%;
+    /* Create a consistent aspect ratio box */
+    aspect-ratio: 4 / 3; 
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #fff; /* White bg for the transparent shoe images */
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the box neatly */
+    transition: transform 0.3s ease;
+}
+
+.img-container img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.card-details h3 {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 700; /* Bold titles */
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.card-details p {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: #444;
+    font-weight: 300;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Tablet: 2 Columns */
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile: 1 Column */
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .women-banner h1 {
+        font-size: 2.5rem;
+    }
+}
